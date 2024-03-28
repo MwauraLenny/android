@@ -1,0 +1,58 @@
+.index{justify-content: space-between;
+display: flex;
+background-color: white;
+color: grey}
+
+.logo{display:flex;
+margin: 20px;
+font-size: 20px;
+font-family:Chandas}
+
+.logo .logox{color:chocolate;
+margin-right: 6px}
+
+.logo .logop{color:black}
+
+.index1 .top li{list-style: none;
+margin: 20px}
+
+.index1 .top{display: flex;
+justify-content: space-between}
+
+.index1 .top a{text-decoration: none;
+color:black}
+
+.index1 .top li:hover{color: chocolate}
+
+.carousel-inner h1{text-align: left;
+font-size: 30px;
+margin-left: -150px;
+font-family: Chandas;
+margin-bottom: 30px}
+
+.carousel-inner p{text-align: left;
+font-size: 20px;
+margin-left: -150px;
+color: lightgrey}
+
+.carousel-inner .button{background-color: black;
+color: white;
+border-radius: 50px;
+border-color: transparent;
+    margin-left: -800px;
+margin-bottom: 200px;
+margin-top: 20px;
+padding:10px}
+
+.row .zero{color: chocolate;
+font-size: 60px;
+margin-top:150px}
+.row .one{color:black;
+font-size: 60px}
+
+
+.row img{width:100%;
+height:60vh}
+
+.btn-dark{border-radius: 20px}
+h1{margin-top: 20px}
