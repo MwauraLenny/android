@@ -1,5 +1,6 @@
 package com.vic.lennymobileapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -52,7 +53,42 @@ class MainActivity : ComponentActivity() {
 
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    HelloWorld("Lenny")
+                    Column {
+                        HelloWorld("Lenny")
+                        Spacer(modifier = Modifier.height(20.dp))
+                        Button(
+                            onClick = {
+                                val intent = Intent(this@MainActivity,LoginActivty::class.java)
+                                startActivity(intent)
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(10.dp),
+                            colors = ButtonDefaults.buttonColors(Color.Cyan)) {
+                            Text(text = "Login Here")
+                        }
+                        Spacer(modifier = Modifier.height(20.dp))
+
+                        Button(onClick = {},
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(10.dp),
+                            colors = ButtonDefaults.buttonColors(Color.Black)) {
+                            Text(text ="Register Here",
+                                color =Color.White)
+                    }
+                        Spacer(modifier = Modifier.height(20.dp))
+                        Button(onClick = {
+                                         val background = Intent(this@MainActivity,BackgroundActivity::class.java)
+                            startActivity(background)
+                        },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(10.dp),
+                            colors = ButtonDefaults.buttonColors(Color.Black)) {
+                            Text(text ="Background Image",
+                                color =Color.White)
+                    }
                 }
 
 
@@ -86,25 +122,12 @@ fun HelloWorld( name:String) {
        Spacer(modifier = Modifier.height(20.dp))
    TextFieldLocationComponent()
        Spacer(modifier = Modifier.height(20.dp))
-   Button(
-       onClick = {},
-       modifier = Modifier
-           .fillMaxWidth()
-           .padding(10.dp),
-           colors =ButtonDefaults.buttonColors(Color.Cyan)) {
-       Text(text = "Login Here")
-       }
-       Spacer(modifier = Modifier.height(20.dp))
-   Button(onClick = {},
-       modifier = Modifier
-           .fillMaxWidth()
-           .padding(10.dp),
-       colors = ButtonDefaults.buttonColors(Color.Black)) {
-       Text(text ="Register Here",
-            color =Color.White)
-   }
 
 
+
+
+}
+//
 //       Text(
 //           text = "$name is a Software Developer/Android Developer ",
 //           fontSize = 23.sp,
@@ -117,7 +140,7 @@ fun HelloWorld( name:String) {
 //               .wrapContentHeight(align = Alignment.Top)
 //       )
    }
-}
+
 @Preview(showSystemUi = true , showBackground = true)
 @Composable
 fun HelloWorldPreview() {
@@ -166,7 +189,9 @@ fun TextFieldLocationComponent(){
         placeholder = {
             Text(text = "Please Enter your Location")
         })
+    }
 }
+
 
 
 
