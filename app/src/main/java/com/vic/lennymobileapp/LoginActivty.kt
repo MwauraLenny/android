@@ -88,7 +88,7 @@ fun LoginScreen(){
             color = Color.Red,
             fontFamily = FontFamily.Serif,
             fontSize = 20.sp
-        modifier)
+        )
 
 
     Spacer(modifier = Modifier.height(20.dp))
